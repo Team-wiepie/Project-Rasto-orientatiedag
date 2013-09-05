@@ -8,7 +8,7 @@
     <body>
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
-<form name="form1" method="post" action="Login.php">
+<form name="form1" method="post" action="Sendemail.php">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
@@ -17,12 +17,11 @@
 <tr>
 <td width="78">E-mail</td>
 <td width="6">:</td>
-<td width="294"><input name="username" type="text" id="myusername"></td>
+<td width="294"><input name="username" type="text" id="myusername" required></td>
 </tr>
 <tr>
-<td><input type="submit" name="Submit" value="Login"></td>
-<td><a href="RForm.php">Register</a></td>
-<td><a href="WVForm.php">Wachtwoord vergeten</a></td>
+<td><input type="submit" name="Submit" value="Submit"></td>
+<td><a href="Index.php">Back</a></td>
 </tr>
 </table>
 </td>

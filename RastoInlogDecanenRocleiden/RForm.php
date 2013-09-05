@@ -10,7 +10,7 @@
 </div>
 <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
-<form name="form1" method="post" action="Sendemail.php">
+<form name="form1" method="post" action="Register.php">
 <td>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
 <tr>
@@ -19,53 +19,57 @@
 <tr>
 <td width="78">E-mail</td>
 <td width="6">:</td>
-<td width="294"><input name="username" type="text" id="myusername"></td>
+<td width="294"><input name="username" type="text" id="Eusername" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Voornaam</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Voornaam"  maxlength="50"  required></td>
 </tr>
 <tr>
 <td>Tussenvoegsels</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="voorzetsels" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Achternaam</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Achternaam" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Postcode</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="PostcodeCijfers" maxlength="4" required></td>
+<td><input name="username" type="text" id="PostcodeLetters"  maxlength="2" required></td>
 </tr>
 <tr>
 <td>Stad/Dorp</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="StadDorp" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Straatnaam</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Staartnaam" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Straattoevoegsel</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Straattoevoegsels" maxlength="10" required></td>
 </tr>
 <tr>
 <td>Straatnummer</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Straatnummer" maxlength="8" required></td>
 </tr>
 <tr>
 <td>Telefoon</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="username" type="text" id="Telefoon" maxlength="20" required></td>
+</tr>
+<td>Mobiele-Telefoon</td>
+<td>:</td>
+<td><input name="username" type="text" id="MobielTelefoon" maxlength="20" required></td>
 </tr>
 <tr>
 <td><input type="submit" name="Submit" value="Submit"></td>
