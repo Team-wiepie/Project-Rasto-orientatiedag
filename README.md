@@ -5,6 +5,5 @@ http://orteil.dashnet.org/cookieclicker/
 
 To Do
 ===========================
-- Inlog systeem
-- Design
-- 
+* Inlog systeem
+* Design
