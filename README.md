@@ -1,3 +1,4 @@
 Project-Rasto-orientatiedag
 ===========================
-Beschrijving
+Tijd voor cookie clicker!
+http://orteil.dashnet.org/cookieclicker/
