@@ -17,12 +17,12 @@
 <tr>
 <td width="78">E-Mail</td>
 <td width="6">:</td>
-<td width="294"><input name="username" type="text" id="myusername"></td>
+<td width="294"><input name="username" type="text" id="myusername" required></td>
 </tr>
 <tr>
 <td>Password</td>
 <td>:</td>
-<td><input name="password" type="password" id="mypassword"></td>
+<td><input name="password" type="password" id="mypassword" required></td>
 </tr>
 <tr>
 <td><input type="submit" name="Submit" value="Login"></td>

@@ -1,0 +1,15 @@
+
+body{
+    font-family: arial;
+}
+
+#opleiding, #locatie, #opldeiding_code, #categorie{
+    border-radius: 5px;
+}
+
+#opleiding_main{
+    border-color: #009DE0;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+}
