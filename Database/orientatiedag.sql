@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Genereertijd: 06 sep 2013 om 09:38
+-- Genereertijd: 06 sep 2013 om 12:04
 -- Serverversie: 5.5.32
 -- PHP-versie: 5.4.16
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `leerling` (
   `email` varchar(40) DEFAULT NULL,
   `telefoon` int(15) DEFAULT NULL,
   `opleidingnaam` varchar(40) DEFAULT NULL,
-  `decaan` varchar(40) DEFAULT NULL,
+  `decaan_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`leerling_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

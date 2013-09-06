@@ -1,10 +1,6 @@
 <?php
     require_once 'server_login.php';
     session_start();
-        $opleidingnaam = $_POST['opleidingnaam'];
-        $opleidingcode = $_POST['opleidingcode'];
-        $locatie = $_POST['locatie'];
-        
         $query = ("Select voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam from leerling where decaan_id == ".$_SESSION['decaan_id']) or die('Cant find the students');
         
         $leerlingen = mysql_query($query) or die("<b>A fatal MySQL error occured</b>.\n<br />Query: " . $query . "<br />\nError: (" . mysql_errno() . ") " . mysql_error());
