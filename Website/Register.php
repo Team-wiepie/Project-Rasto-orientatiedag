@@ -40,7 +40,13 @@ if(!isset($voornaam)){
    $straattoevoegsels=$_POST['Straattoevoegsels'];
    $straatnummer=$_POST['Straatnummer'];
    $telefoon=$_POST['Telefoon'];
-   mysql_query("INSERT INTO account(email, wachtwoord)VALUES('$usernamem', '$passwordencrypt')")or die("Can't Insert");
+   $ROCCode=$_POST['ROCCode'];
+   if ($ROCCode == "ROC426573"){
+       $Accounttype = 1;
+   }else{
+       $Accounttype = 0;
+   }
+   mysql_query("INSERT INTO account(email, wachtwoord, accounttype)VALUES('$usernamem', '$passwordencrypt',$Accounttype)")or die("Can't Insert");
    mysql_query("INSERT INTO decanen(voornaam, tussenvoegsel, achternaam, postcode_cijf, postcode_let, stad_dorp, straatnaam, 
    straatnummer, straattoev, email, telefoon)VALUES('$voornaam', '$voorzetsels', '$achternaam', '$postcodeC', '$postcodeL', '$staddorp', '$straatnaam', '$straatnummer' , '$straattoevoegsels','$usernamem', '$telefoon')")or die("Can't Insert");
  
@@ -118,7 +124,7 @@ if(!isset($voornaam)){
 <tr>
 <td>ROC Medewerkers code</td>
 <td>:</td>
-<td><input name="ROC-Code" type="text" id="ROC-Code" maxlength="20" required></td>
+<td><input name="ROCCode" type="text" id="ROCCode" maxlength="20" required></td>
 </tr>
 <tr>
 <td><input type="submit" name="Submit" value="Submit"></td>
