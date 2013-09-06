@@ -28,7 +28,9 @@
 						"vnrogaeiugr",
 						"blabla",
 						"Nog een opleiding",
-						"Opleiding opleiding!");
+						"Opleiding opleiding!",
+						"SWAG Opleiding",
+						"Yolo opleiding");
 						
 						
 						foreach($opleiding as $op){
