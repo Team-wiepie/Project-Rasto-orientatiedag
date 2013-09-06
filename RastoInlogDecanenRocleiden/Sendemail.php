@@ -13,14 +13,14 @@ $sql="SELECT password FROM $tbl_name WHERE username='$myusername'";
 
   for ($i=0; $i < $length; $i++)
   $str .= $chars[rand(0, $max)];
-  $password="ROC".$str;
+  $passwordrandom="ROC".$str;
 
 }
 
 
  $to = $_POST['username'];
  $subject = "Your Password";
- $body = "Your password is"." ".$password;
+ $body = "Your password is"." ".$passwordrandom;
  $from = "00099743@student.rocleiden.nl";
  if (mail($to, $subject, $body)) {
    echo("<p>Email successfully sent!</p>");
@@ -28,4 +28,9 @@ $sql="SELECT password FROM $tbl_name WHERE username='$myusername'";
   } else {
    echo("<p>Email delivery failed…</p>");
   }
+  
+$passwordencrypt = md5(sha1($passwordrandom));
+
+
+ mysql_query("UPDATE account SET wachtwoord='$passwordencrypt' WHERE CustomerName='Alfreds Futterkiste';")or die("Can't Insert");
  ?>
