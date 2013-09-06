@@ -1,5 +1,6 @@
 <?php
 require_once 'server_login.php';
+session_start();
 
 // Gebruikersnaam en Wachtwoord van de Index.php//
 $myusername=$_POST['username']; 
@@ -19,9 +20,10 @@ $count=mysql_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
-
+    
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 header("location:Homepage.html");
+$_SESSION['username']= $myusername;
 }
 else {
 echo "Wrong Username or Password";
