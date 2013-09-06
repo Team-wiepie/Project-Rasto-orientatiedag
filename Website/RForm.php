@@ -53,19 +53,24 @@
 <td><input name="Straatnaam" type="text" id="Straatnaam" maxlength="50" required></td>
 </tr>
 <tr>
-<td>Straattoevoegsel</td>
-<td>:</td>
-<td><input name="Straattoevoegsels" type="text" id="Straattoevoegsels" maxlength="10" required></td>
-</tr>
-<tr>
 <td>Straatnummer</td>
 <td>:</td>
 <td><input name="Straatnummer" type="text" id="Straatnummer" maxlength="8" required></td>
 </tr>
 <tr>
+<td>Straat toevoegsel</td>
+<td>:</td>
+<td><input name="Straattoevoegsels" type="text" id="Straattoevoegsels" maxlength="10" required></td>
+</tr>
+<tr>
 <td>Telefoon</td>
 <td>:</td>
 <td><input name="Telefoon" type="text" id="Telefoon" maxlength="20" required></td>
+</tr>
+<tr>
+<td>ROC Medewerkers code</td>
+<td>:</td>
+<td><input name="ROC-Code" type="text" id="ROC-Code" maxlength="20" required></td>
 </tr>
 <tr>
 <td><input type="submit" name="Submit" value="Submit"></td>

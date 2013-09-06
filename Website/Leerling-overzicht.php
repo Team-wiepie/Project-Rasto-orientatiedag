@@ -1,12 +1,14 @@
 <?php
     require_once 'server_login.php';
     session_start();
+    if($_SESSION['account-type'] == 0){
         $query = ("Select voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam from leerling where decaan_id == ".$_SESSION['decaan_id']) or die('Cant find the students');
-        
         $leerlingen = mysql_query($query) or die("<b>A fatal MySQL error occured</b>.\n<br />Query: " . $query . "<br />\nError: (" . mysql_errno() . ") " . mysql_error());
-        
-        mysql_close();
-        function tabellen() {
+    }else{
+        $query = ("Select voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam from leerling") or die('Cant find the students');
+        $leerlingen = mysql_query($query) or die("<b>A fatal MySQL error occured</b>.\n<br />Query: " . $query . "<br />\nError: (" . mysql_errno() . ") " . mysql_error());
+    }
+    function tabellen() {
             if (mysql_num_rows($leerlingen) > 0) {
                 echo "<table cellpadding=10 border=1>";
                     while($row = mysql_fetch_row($leerlingen)) {
@@ -24,6 +26,7 @@
                 echo "No rows found!";
             }
         }
+        mysql_close();
   ?>
 <!DOCTYPE html>
 <html>

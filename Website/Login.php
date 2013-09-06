@@ -24,7 +24,8 @@ if($count==1){
 // Register $myusername, $mypassword and redirect to file "login_success.php"
 header("location:Homepage.html");
 
-$_SESSION['decaan_id']= $result[0];
+$_SESSION['decaan_id'] = $result[0];
+$_SESSION['account-type'] = $result[3];
 }
 else {
 echo "Wrong Username or Password";
