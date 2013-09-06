@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Genereertijd: 06 sep 2013 om 09:19
+-- Genereertijd: 06 sep 2013 om 09:38
 -- Serverversie: 5.5.32
 -- PHP-versie: 5.4.16
 
@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `account_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(40) DEFAULT NULL,
   `wachtwoord` varchar(255) DEFAULT NULL,
+  `accounttype` int(1) NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
