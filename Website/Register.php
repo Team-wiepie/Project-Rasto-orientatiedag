@@ -27,17 +27,7 @@
   ?>
 
  <?php 
-
-
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="orientatiedag"; // Database name 
-$tbl_name=""; // Table name 
-
-
-$bd = mysql_connect($host, $username, $password) or die("Could not connect database");
-mysql_select_db($db_name,$bd) or die("Could not select database");
+require_once 'server_login.php';
 
 $passwordencrypt = md5(sha1($passwordrandom));
 $usernamem=$_POST['Eusername'];

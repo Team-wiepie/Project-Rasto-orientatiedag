@@ -1,6 +1,5 @@
 <?php
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+require_once 'server_login.php';
 
 $sql="SELECT password FROM $tbl_name WHERE username='$myusername'";
 {
