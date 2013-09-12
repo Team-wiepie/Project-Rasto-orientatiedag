@@ -8,7 +8,7 @@
 	<body>
 		<div id="body">
 			<?php
-				require_once 'server_login.php';
+				require_once 'server_login.php';skype:paulvandenhelder
 				session_start();
 				
 				if(isset($_POST["submit"])){
@@ -25,6 +25,20 @@
 					
 					echo "Leerling toegevooegd.<br>";
 					echo $_SESSION['decaan_id'];
+					
+					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
+					$body = "Hallo, $voornaam $achternaam.<br>
+							Je bent toegevoegd aan de opleiding $opleiding op het ROC Leiden.<br>
+							De decaan heeft deze onformatie over U ingevoerd:<br>
+							- Voornaam: $voornaam<br>
+							- Tussenvoegsel: $tussenvoegsel<br>
+							- Achternaam: $achternaam<br>
+							- E-Mail adres: $email<br>
+							- Telefoonnummer: $phone<br>
+							- Opleiding: $opleiding<br>
+							<br>
+							Klopt deze informatie niet? Mail dan naar: foute_inschrijving@ROCleiden.nl";
+					mail($email, $subject, $body);
 					
 				}else{
 				$query = "SELECT opleidingnaam FROM opleiding";
