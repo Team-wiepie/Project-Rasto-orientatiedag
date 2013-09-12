@@ -8,7 +8,7 @@
 	<body>
 		<div id="body">
 			<?php
-				require_once 'server_login.php';skype:paulvandenhelder
+				require_once 'server_login.php';
 				session_start();
 				
 				if(isset($_POST["submit"])){
