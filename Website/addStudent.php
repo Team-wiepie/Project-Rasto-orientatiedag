@@ -20,7 +20,7 @@
 					$opleiding = $_POST["opleiding"];
 					
 					$insQuery = "INSERT INTO leerling (voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam, decaan_id)
-						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$email', '$phone', '$opleiding', '".$_SESSION['decaan_id']."')";
+						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$email', '$phone', '$opleiding', '".$_SESSION['account_id']."')";
 					mysql_query($insQuery) or die("NOOOOOOO! ". mysql_error());
 					
 					echo "Leerling toegevooegd.<br>";
