@@ -23,6 +23,8 @@
 						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$email', '$phone', '$opleiding', '".$_SESSION['decaan_id']."')";
 					mysql_query($insQuery) or die("NOOOOOOO! ". mysql_error());
 					
+					echo "Leerling toegevooegd!! SWAG";
+					
 				}else{
 				$query = "SELECT opleidingnaam FROM opleiding";
 					$result = mysql_query($query);
