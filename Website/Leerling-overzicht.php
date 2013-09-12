@@ -4,7 +4,6 @@
     
 
     function tabellen() {
-
         
         if($_SESSION['account-type'] == 0){
             $query = ("Select voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam from leerling where decaan_id = ".$_SESSION['account_id']) or die('Cant find the students');
