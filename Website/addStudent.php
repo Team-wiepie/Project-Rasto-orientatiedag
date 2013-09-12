@@ -9,7 +9,7 @@
 		<div id="body">
 			<?php
 				require_once 'server_login.php';
-				
+				session_start();
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
@@ -23,7 +23,8 @@
 						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$email', '$phone', '$opleiding', '".$_SESSION['decaan_id']."')";
 					mysql_query($insQuery) or die("NOOOOOOO! ". mysql_error());
 					
-					echo "Leerling toegevooegd!! SWAG";
+					echo "Leerling toegevooegd.<br>";
+					echo $_SESSION['decaan_id'];
 					
 				}else{
 				$query = "SELECT opleidingnaam FROM opleiding";
