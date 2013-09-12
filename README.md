@@ -20,5 +20,5 @@ opleidingen opslaan en uitkiezen
 
 To Do
 ===========================
-* Inlog systeem
+* Inlog systeem testen
 * Design
