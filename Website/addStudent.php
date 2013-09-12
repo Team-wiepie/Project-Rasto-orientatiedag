@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 	<head>
 		<title>Leerling toevoegen</title>
@@ -9,7 +10,6 @@
 		<div id="body">
 			<?php
 				require_once 'server_login.php';
-				session_start();
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
