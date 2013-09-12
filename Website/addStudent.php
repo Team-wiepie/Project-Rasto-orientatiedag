@@ -3,7 +3,7 @@
 	<head>
 		<title>Leerling toevoegen</title>
 		<!--<link rel="stylesheet" type="text/css" href="../style/style.css">-->
-		<script src="jquery-2.0.3.min.js" type="text/javascript"></script>
+		<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
 		<script src="js/addStudent.js" type="text/javascript"></script>
 	</head>
 	<body>
