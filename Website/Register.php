@@ -82,7 +82,7 @@ if(isset($_POST['submit'])){
 <tr>
 <td>Tussenvoegsels</td>
 <td>:</td>
-<td><input name="voorzetsels" type="text" id="voorzetsels" maxlength="50" required></td>
+<td><input name="voorzetsels" type="text" id="voorzetsels" maxlength="50"></td>
 </tr>
 <tr>
 <td>Achternaam</td>
@@ -92,7 +92,7 @@ if(isset($_POST['submit'])){
 <tr>
 <td>Postcode</td>
 <td>:</td>
-<td><input name="Postcodecijfers" type="text" id="Postcodecijfers" maxlength="4" required></td>
+<td><input name="Postcodecijfers" type="number" id="Postcodecijfers" maxlength="4" required></td>
 <td><input name="Postcodeletters" type="text" id="Postcodeletters"  maxlength="2" required></td>
 </tr>
 <tr>
@@ -108,12 +108,12 @@ if(isset($_POST['submit'])){
 <tr>
 <td>Straatnummer</td>
 <td>:</td>
-<td><input name="Straatnummer" type="text" id="Straatnummer" maxlength="8" required></td>
+<td><input name="Straatnummer" type="number" id="Straatnummer" maxlength="8" required></td>
 </tr>
 <tr>
 <td>Straat toevoegsel</td>
 <td>:</td>
-<td><input name="Straattoevoegsels" type="text" id="Straattoevoegsels" maxlength="10" required></td>
+<td><input name="Straattoevoegsels" type="text" id="Straattoevoegsels" maxlength="10"></td>
 </tr>
 <tr>
 <td>Telefoon</td>
