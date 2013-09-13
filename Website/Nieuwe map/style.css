@@ -1,0 +1,15 @@
+.opties li{
+	list-style: none;
+	display: inline;
+}
+.opties li a{
+	
+	border-radius: 3px;
+	padding:5px;
+	display: inline;
+	text-decoration: none;
+	font-style: block;
+	font-weight:bold;
+	color:#fff;
+	background-color: #009de0;
+	}

@@ -1,8 +1,8 @@
 <?php
     $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "orientatiedag";
+    $user = "rsbloom";
+    $pass = "uK34rRGy";
+    $db = "rsbloom_orientatiedag";
     
     $connection = mysql_connect($host, $user, $pass, $db) or die("Unable to connect database");
     

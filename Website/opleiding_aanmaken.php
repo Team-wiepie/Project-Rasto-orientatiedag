@@ -29,13 +29,13 @@ else {
         <div id="opleiding_main">
         <h2>opleiding toevoegen</h2>
         <form action="opleiding_aanmaken.php" method="post">
-        <input type="text" placeholder="opleiding" name="opleidingnaam">
+        <input type="text" placeholder="opleiding" name="opleidingnaam" required>
         <br>
-        <input type="text" placeholder="opleidings code" name="opleidingcode">
+        <input type="text" placeholder="opleidings code" name="opleidingcode" required>
         <br>
-        <input type="text" placeholder="locatie" name="locatie">
+        <input type="text" placeholder="locatie" name="locatie" required>
         <br>
-        <input type="submit" name="submit" value="voeg toe"> 
+        <input type="submit" name="submit" value="voeg toe" required> 
         </form>
         </div>
     </body>
