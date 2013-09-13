@@ -3,8 +3,8 @@
 	<head>
 		<title>Leerling toevoegen</title>
 		<!--<link rel="stylesheet" type="text/css" href="../style/style.css">-->
-		<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
-		<script src="js/addStudent.js" type="text/javascript"></script>
+		<script src="jquery-2.0.3.min.js" type="text/javascript"></script>
+		<script src="addStudent.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="body">
@@ -24,10 +24,10 @@
 					mysql_query($insQuery) or die("NOOOOOOO! ". mysql_error());
 					
 					echo "Leerling toegevooegd.<br>";
-					echo $_SESSION['decaan_id'];
+					echo $_SESSION['account_id'];
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					$body = "Hallo, $voornaam $achternaam.\n Je bent toegevoegd aan de opleiding $opleiding op het ROC Leiden.\n De decaan heeft deze onformatie over U ingevoerd:\n - Voornaam: $voornaam\n - Tussenvoegsel: $tussenvoegsel\n - Achternaam: $achternaam\n - E-Mail adres: $email\n - Telefoonnummer: $phone\n - Opleiding: $opleiding\n \n Klopt deze informatie niet? Mail dan naar: foute_inschrijving@ROCleiden.nl";
+					$body = "Hallo, $voornaam $achternaam.\n Je bent toegevoegd aan de opleiding $opleiding op het ROC Leiden.\n De decaan heeft deze onformatie over U ingevoerd:\n - Voornaam: $voornaam\n - Tussenvoegsel: $tussenvoegsel\n - Achternaam: $achternaam\n - E-Mail adres: $email\n - Telefoonnummer: $phone\n - Opleiding: $opleiding\n \n Als die informatie niet klopt kunt u het aanpassen onder student aanpassen";
 					mail($email, $subject, $body);
 					
 				}else{
