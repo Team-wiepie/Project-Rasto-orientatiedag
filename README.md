@@ -3,6 +3,8 @@ Project-Rasto-orientatiedag
 Tijd voor cookie clicker!
 http://orteil.dashnet.org/cookieclicker/
 
+Dit project wordt gehost op: 
+
 Opdracht
 ==========================
 ROC leiden 
