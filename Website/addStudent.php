@@ -5,7 +5,7 @@
 				//hard-code test session
 				$_SESSION['account_id'] = 1;
 
-				$getMail = "SELECT email FROM email WHERE id = 1";
+				$getMail = "SELECT email FROM email WHERE email_id = 1";
 				$swag = mysql_query($getMail);
 				$email = mysql_result($swag);
 				
