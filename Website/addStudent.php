@@ -27,7 +27,7 @@
 					mail($email, $subject, $body);
 					
 				}else{
-				$query = "SELECT opleidingnaam FROM opleiding";
+					$query = "SELECT opleidingnaam FROM opleiding";
 					$result = mysql_query($query);
 					$opleidingen = array();
 					while($res = mysql_fetch_assoc($result)) {
