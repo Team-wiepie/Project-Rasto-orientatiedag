@@ -1,5 +1,4 @@
 <?php include'header.php'; ?>
-<script type="text/javascript" src="addStudent.js"></script>
 
 			<?php
 				require_once 'server_login.php';
@@ -7,7 +6,8 @@
 				$_SESSION['account_id'] = 1;
 
 				$getMail = "SELECT email FROM email WHERE id = 1";
-				$email = mysql_result(mysql_query($getMail));
+				$swag = mysql_query($getMail);
+				$email = mysql_result($swag);
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
