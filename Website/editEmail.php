@@ -14,7 +14,7 @@
 			$text = mysql_fetch_array($result);
 			
 			if(isset($_POST['submit'])){
-				mysql_query("UPDATE email SET email = '". $_POST['emailText'] . "' WHERE id = 1") or die("Kut! " . mysql_error());
+				mysql_query("UPDATE email SET email = '". $_POST['emailText'] . "' WHERE email_id = 1") or die("Kut! " . mysql_error());
 			}
 		?>
 		<form action="editEmail.php" method="POST">
