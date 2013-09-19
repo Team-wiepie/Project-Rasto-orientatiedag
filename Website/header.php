@@ -14,7 +14,8 @@
 			<li><a href="index.php">Home</a></li>
 			<li><a href="addStudent.php">Leerling toevoegen</a></li>
 			<li><a href="opleiding_aanmaken.php">Opleiding toevoegen</a></li>
-                        <li><a href="overzicht.php">Student overzicht/aanpassen</a></li>
+            <li><a href="overzicht.php">Student overzicht/aanpassen</a></li>
+            <li><a href="editEmail.php">Email bericht aanpassen</a></li>
                         <?php
                         if($_SESSION['account-type']== 1){
                             echo "<li><a href='Account_Edit.php'>Account aanpassen</a></li>";
