@@ -1,15 +1,7 @@
-<html>
-	<head>
-		<title>Leerling toevoegen</title>
-		<!--<link rel="stylesheet" type="text/css" href="../style/style.css">-->
-		<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
-		<script src="js/addStudent.js" type="text/javascript"></script>
-	</head>
-	<body>
+<?php include_once 'header.php'; ?>
             <div id="body">
             <?php
             require_once 'server_login.php';
-            session_start();
                 // Selectie van welk account daarop dan gebaaseerd welke studenten je kan aanpassen
                 if($_SESSION['account-type'] == 0){
                     $query = ("SELECT leerling_id, voornaam, tussenvoegsel, achternaam FROM leerling where decaan_id =".$_SESSION['account_id']);
@@ -71,5 +63,4 @@
                 }
             ?>
             </div>
-	</body>
-</html>
+<?php include 'footer.php' ?>

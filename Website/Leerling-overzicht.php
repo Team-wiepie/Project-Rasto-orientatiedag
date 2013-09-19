@@ -1,7 +1,6 @@
 <?php
-    session_start();
+require 'header.php';
     require_once 'server_login.php';
-    
 
     function tabellen() {
         if($_SESSION['account-type'] == 0){
@@ -36,17 +35,10 @@
         mysql_close(); 
     }
   ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="global.css.css" />
-        <title>Aangemelden leerlingen</title>
-    </head>
-    <body>
+
+
         <h2>Leerling overzicht</h2>
         <div>
              <?php   tabellen(); ?>
         </div>
-    </body>
-</html>
+<?php require 'footer.php'; ?>

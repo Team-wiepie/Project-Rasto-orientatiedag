@@ -135,6 +135,5 @@ if(isset($_POST['submit'])){
 </form>
 </tr>
 </table> 
-</body>
-</html>
-<?php } ?>
+<?php require 'footer.php';
+ } ?>

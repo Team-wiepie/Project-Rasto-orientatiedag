@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_POST['submit'])) {
     require_once 'server_login.php';
         
@@ -16,16 +15,10 @@ if (isset($_POST['submit'])) {
         
         mysql_close();
 }
-else {
+else { require 'header.php';
         ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="global.css.css" />
-        <title>student aanmelden!</title>
-    </head>
-    <body>
+
+        
         <div id="opleiding_main">
         <h2>opleiding toevoegen</h2>
         <form action="opleiding_aanmaken.php" method="post">
@@ -38,6 +31,6 @@ else {
         <input type="submit" name="submit" value="voeg toe" required> 
         </form>
         </div>
-    </body>
-</html>
-<?php } ?>
+
+<?php require 'footer.php';
+ } ?>
