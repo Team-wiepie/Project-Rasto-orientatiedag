@@ -13,7 +13,7 @@
 		<!-- CDN hosted by Cachefly -->
 		<script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
 		<script>
-				tinymce.init({selector:'textarea'});
+				tinymce.init({selector:'textarea', width:600, height:300});
 		</script>
 	</head>
 	<body>
