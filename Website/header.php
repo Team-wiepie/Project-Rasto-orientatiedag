@@ -1,4 +1,3 @@
-<?php include 'config.php' ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,3 +23,9 @@
                         ?>
 		</ul>
 	</div>
+
+<!-- 	<?php 
+	// if (!isset($_SESSION['user']) || empty($_SESSION['user']) && $_SERVER['REQUEST_URI'] != '/login.php') {
+ //    header("location: login.php");
+
+?> -->
