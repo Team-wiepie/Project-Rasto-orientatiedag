@@ -1,5 +1,5 @@
 <?php include'header.php'; ?>
-
+<script type="text/javascript" src="addStudent.js"></script>
 
 			<?php
 				require_once 'server_login.php';
@@ -23,7 +23,7 @@
 					echo $_SESSION['account_id'];
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					$body = "Hallo, $voornaam $achternaam.\n Je bent toegevoegd aan de opleiding $opleiding op het ROC Leiden.\n De decaan heeft deze onformatie over U ingevoerd:\n - Voornaam: $voornaam\n - Tussenvoegsel: $tussenvoegsel\n - Achternaam: $achternaam\n - E-Mail adres: $email\n - Telefoonnummer: $phone\n - Opleiding: $opleiding\n \n Als die informatie niet klopt kunt u het aanpassen onder student aanpassen";
+					$body = "";
 					mail($email, $subject, $body);
 					
 				}else{
