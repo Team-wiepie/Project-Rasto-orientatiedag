@@ -6,6 +6,8 @@
 				//hard-code test session
 				$_SESSION['account_id'] = 1;
 
+				$getMail = "SELECT email FROM email WHERE id = 1";
+				$email = mysql_result(mysql_query($getMail));
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
@@ -23,8 +25,7 @@
 					echo $_SESSION['account_id'];
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					$body = "";
-					mail($email, $subject, $body);
+					mail($email, $subject, $email);
 					
 				}else{
 					$query = "SELECT opleidingnaam FROM opleiding";
@@ -50,7 +51,7 @@
 					
 					
 					$subject = "ROC leiden | Gegevens aangepast!";
-					$body = "Hallo, $voornaam $achternaam.\n Je bent toegevoegd aan de opleiding $opleiding op het ROC Leiden.\n De decaan heeft deze onformatie over U ingevoerd:\n - Voornaam: $voornaam\n - Tussenvoegsel: $tussenvoegsel\n - Achternaam: $achternaam\n - E-Mail adres: $email\n - Telefoonnummer: $telefoon\n - Opleiding: $opleiding\n \n Als die informatie niet klopt kunt u het aanpassen onder student aanpassen";
+					$body = "Swag";
 					mail($email, $subject, $body);
 
 
