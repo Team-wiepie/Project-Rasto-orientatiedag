@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Databank: `orientatiedag`
+-- Databank: `rsbloom_orientatiedag`
 --
-CREATE DATABASE IF NOT EXISTS `orientatiedag` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `orientatiedag`;
+CREATE DATABASE IF NOT EXISTS `rsbloom_orientatiedag` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `rsbloom_orientatiedag`;
 
 -- --------------------------------------------------------
 
