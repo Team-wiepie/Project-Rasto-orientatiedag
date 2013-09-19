@@ -18,9 +18,9 @@
 	</head>
 	<body>
 		<div id="resultaat">
-			<?php if(isset($_POST['submit'])){echo "<b>Het E-Mail bericht is bijgewerkt!</b><br>"} ?>
+			<?php if(isset($_POST['submit'])){echo "<b>Het E-Mail bericht is bijgewerkt!</b><br>";} ?>
 			Voorbeeld van de E-Mail:<br>
-			<?php echo $text ?>
+			<?php echo $text; ?>
 		</div>
 		
 		<form action="editEmail.php" method="POST">
