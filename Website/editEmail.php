@@ -21,12 +21,12 @@
 			<input type="submit" name="submit" value="Verzenden" class='submit'>
 			<br>
 			Om in de email gegevens te verwerken gebruik:<br>
-			- $voornaam voor de voornaam<br>
-			- $tussenvoegsel voor het tussenvoegsel<br>
-			- $achternaam voor de achternaam<br>
-			- $email voor het E-Mail adress van de leerling<br>
-			- $phone voor het telefoonnummer<br>
-			- $opleiding voor de opleiding<br>
+			- :voornaam voor de voornaam<br>
+			- :tussenvoegsel voor het tussenvoegsel<br>
+			- :achternaam voor de achternaam<br>
+			- :email voor het E-Mail adress van de leerling<br>
+			- :phone voor het telefoonnummer<br>
+			- :opleiding voor de opleiding<br>
 			Voorbeeld: "Hallo $voornaam $achternaam!"<br>
 			Geeft als output: "Hallo Jan Janssen!"
 			<br>
