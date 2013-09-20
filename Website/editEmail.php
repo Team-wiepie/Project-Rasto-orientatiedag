@@ -18,7 +18,7 @@
 		<form action="editEmail.php" method="POST">
 			<textarea id="editEmail" name="emailText"><?php if(isset($_POST['submit'])){echo $_POST['emailText'];}else{echo $text['email'];} ?></textarea>
 			<br>
-			<input type="submit" name="submit" value="Verzenden">
+			<input type="submit" name="submit" value="Verzenden" class='submit'>
 			<br>
 			Om in de email gegevens te verwerken gebruik:<br>
 			- $voornaam voor de voornaam<br>

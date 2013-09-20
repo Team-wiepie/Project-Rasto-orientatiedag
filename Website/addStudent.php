@@ -73,7 +73,7 @@
 						}
 					?>
 				</div>
-				<input type="submit" name="submit" value="Verzenden">
+				<input type="submit" name="submit" value="Verzenden" class='submit'>
 			</form>
 			<?php
 				}

@@ -37,7 +37,7 @@
                         echo "<input type='hidden' name='email' value='".$row['email']."'/>";
                         echo "<input type='hidden' name='telefoon' value='".$row['telefoon']."'/>";
                         echo "<input type='hidden' name='opleidingnaam' value='".$row['opleidingnaam']."'/>";
-                        echo "<td>"."<input type='submit' name='submit' value='aanpasssen'>"."</td>";
+                        echo "<td>"."<input type='submit' name='submit' value='aanpasssen' class='submit'>"."</td>";
                         echo "</form>";
                         echo "</tr>";
                         echo "<br />";
@@ -71,7 +71,7 @@
                 Telefoonnummer: <input id="phoneInput" name="telefoon" type="number" value="<?php echo $telefoon ?>"><br>
                 <br>
                 Opleiding: <input id="searchbox" type="text" placeholder="Search"><br>
-                <div id="opleidingDIV" style="height:100px; width: 300px; background-color: #aaa; overflow: auto;">
+                <div id="opleidingDIV" style="height:100px; width: 300px; overflow: auto; border:solid 2px #009de0; border-radius:5px;">
                     <?php
                         foreach($opleidingen as $op){
                             echo "<span><input type='radio' name='opleiding' id='".$op."' value='".$op."'><label for='".$op."'>".$op."</label><br></span>";

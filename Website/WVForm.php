@@ -39,13 +39,14 @@ else{
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="PHP.css" rel="StyleSheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
         <script type="text/javascript" src='js/addStudent.js'></script>
     </head>
     <body>
 <div id="Logo">
 </div>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="300" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form2" method="post" action="WVForm.php">
 <td>
@@ -59,7 +60,7 @@ else{
 <td width="294"><input name="Eusername" type="text" id="Eusername" maxlength="50" required></td>
 </tr>
 <tr>
-<td><input type="submit" name="submit" value="Submit" id='submitWV'></td>
+<td><input type="submit" name="submit" value="Submit" id='submitWV' class='submit'></td>
 <td><a href="index.php">Back</a></td>
 </tr>
 </table>

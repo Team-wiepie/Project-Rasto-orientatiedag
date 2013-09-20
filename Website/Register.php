@@ -56,11 +56,12 @@ if(isset($_POST['submit'])){
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="PHP.css" rel="StyleSheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
 <div id="Logo">
 </div>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="300" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form2" method="post" action="Register.php">
 <td>
@@ -125,7 +126,7 @@ if(isset($_POST['submit'])){
 <td><input name="ROCCode" type="text" id="ROCCode" maxlength="20" ></td>
 </tr>
 <tr>
-<td><input type="submit" name="submit" value="Submit"></td>
+<td><input type="submit" name="submit" value="Submit" class='submit'></td>
 <td><a href="index.php">Back</a></td>
 </tr>
 </table>

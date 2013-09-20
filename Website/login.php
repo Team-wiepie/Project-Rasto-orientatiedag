@@ -30,7 +30,7 @@ if (isset($_POST['submit'])){
 		$_SESSION['account_id'] = $row[0];
 		$_SESSION['account-type'] = $row[3];
 
-		header("location:index.php");
+		header("location:overzicht.php");
 	}
 	else {
 	echo "Wrong Username or Password";
@@ -50,9 +50,10 @@ else {
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="PHP.css" rel="StyleSheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="300" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <form name="form1" method="post" action="login.php">
 <td>
@@ -71,7 +72,7 @@ else {
 <td><input name="password" type="password" id="mypassword" required></td>
 </tr>
 <tr>
-<td><input type="submit" name="submit" value="Login"></td>
+<td><input type="submit" name="submit" value="Login" class='submit'></td>
 <td><a href="Register.php">Register</a></td>
 <td><a href="WVForm.php">Wachtwoord vergeten</a></td>
 </tr>

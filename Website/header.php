@@ -17,7 +17,6 @@
 <body>
 	<div id='homeNav' class="opties">
 		<ul>
-			<li><a href="index.php">Home</a></li>
 			<li><a href="addStudent.php">Leerling toevoegen</a></li>
 			<li><a href="opleiding_aanmaken.php">Opleiding toevoegen</a></li>
             <li><a href="overzicht.php">Student overzicht/aanpassen</a></li>
@@ -29,6 +28,7 @@
             ?>
 		</ul>
 	</div>
+	<div id='container'>
 
 <!-- 	<?php 
 	// if (!isset($_SESSION['user']) || empty($_SESSION['user']) && $_SERVER['REQUEST_URI'] != '/login.php') {
