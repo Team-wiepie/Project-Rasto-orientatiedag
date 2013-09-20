@@ -31,6 +31,7 @@ if(isset($_POST['submit'])){
    $voornaam=$_POST['Voornaam'];
    $achternaam=$_POST['Achternaam'];
    $voorzetsels=$_POST['voorzetsels'];
+   $schoolnaam = $_POST['schoolnaam'];
    $postcodeL=$_POST['Postcodeletters'];
    $postcodeC=$_POST['Postcodecijfers'];
    $staddorp=$_POST['StadDorp'];
@@ -40,8 +41,8 @@ if(isset($_POST['submit'])){
    $telefoon=$_POST['Telefoon'];
 
    mysql_query("INSERT INTO account(email, wachtwoord, accounttype)VALUES('$usernamem', '$passwordencrypt',$Accounttype)")or die("Can't Insert");
-   mysql_query("INSERT INTO decanen(voornaam, tussenvoegsel, achternaam, postcode_cijf, postcode_let, stad_dorp, straatnaam, 
-   straatnummer, straattoev, email, telefoon)VALUES('$voornaam', '$voorzetsels', '$achternaam', '$postcodeC', '$postcodeL', '$staddorp', '$straatnaam', '$straatnummer' , '$straattoevoegsels','$usernamem', '$telefoon')")or die("Can't Insert");
+   mysql_query("INSERT INTO decanen(voornaam, tussenvoegsel, achternaam, schoolnaam, postcode_cijf, postcode_let, stad_dorp, straatnaam, 
+   straatnummer, straattoev, email, telefoon)VALUES('$voornaam', '$voorzetsels', '$achternaam', '$schoolnaam', '$postcodeC', '$postcodeL', '$staddorp', '$straatnaam', '$straatnummer' , '$straattoevoegsels','$usernamem', '$telefoon')")or die("Can't Insert");
    
 }else{
 ?>
@@ -91,18 +92,7 @@ if(isset($_POST['submit'])){
 <tr>
 <td>Schoolnaam</td>
 <td>:</td>
-<td><input name='schoolnaam' type='text' id'schoolnaam' required</td>
-</tr>
-<tr>
-<td>Postcode</td>
-<td>:</td>
-<td><input name="Postcodecijfers" type="number" id="Postcodecijfers" maxlength="4" required></td>
-<td><input name="Postcodeletters" type="text" id="Postcodeletters"  maxlength="2" required></td>
-</tr>
-<tr>
-<td>Stad/Dorp</td>
-<td>:</td>
-<td><input name="StadDorp" type="text" id="StadDorp" maxlength="50" required></td>
+<td><input name='schoolnaam' type='text' id'schoolnaam' maxlength='100'required</td>
 </tr>
 <tr>
 <td>Straatnaam</td>
@@ -118,6 +108,17 @@ if(isset($_POST['submit'])){
 <td>Straat toevoegsel</td>
 <td>:</td>
 <td><input name="Straattoevoegsels" type="text" id="Straattoevoegsels" maxlength="10"></td>
+</tr>
+<tr>
+<tr>
+<td>Postcode</td>
+<td>:</td>
+<td><input name="Postcodecijfers" type="number" id="Postcodecijfers" maxlength="4" required></td>
+<td><input name="Postcodeletters" type="text" id="Postcodeletters"  maxlength="2" required></td>
+</tr>
+<td>Stad/Dorp</td>
+<td>:</td>
+<td><input name="StadDorp" type="text" id="StadDorp" maxlength="50" required></td>
 </tr>
 <tr>
 <td>Telefoon</td>
