@@ -27,7 +27,7 @@
 					$replaceRes = array($voornaam, $tussenvoegsel, $achternaam, $adres, $phone, $opleiding);
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					mail($adre, $subject, $email);
+					mail($adres, $subject, $email);
 					
 				}else{
 					$query = "SELECT opleidingnaam FROM opleiding";
