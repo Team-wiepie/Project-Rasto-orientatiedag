@@ -7,7 +7,7 @@
 
 				$getMail = "SELECT email FROM email WHERE email_id = 1";
 				$swag = mysql_query($getMail);
-				$email = mysql_result($swag);
+				$email = mysql_result($swag,0);
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
