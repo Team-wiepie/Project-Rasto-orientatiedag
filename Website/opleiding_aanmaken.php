@@ -16,7 +16,7 @@ function opleidingoverzicht(){
                 echo "<td>".$row['opleidingcode']."</td>";
                 echo "<td>".$row['locatie']."</td>";
                 echo "<form action='opleiding_aanmaken.php' method='POST'>";
-                echo "<td><input type='submit' name='singledelete' value='verwijderen'></td>";
+                echo "<td><input type='submit' name='singledelete' value='verwijderen' class='submit'></td>";
                 echo "<input type='hidden' name='opleiding_id' value='".$row['opleiding_id']."'/>";
                 echo "</form>";
                 echo "</tr>";
@@ -68,14 +68,14 @@ if (isset($_POST['submit'])) {
         <br>
         <input type="text" placeholder="locatie" name="locatie" required>
         <br>
-        <input type="submit" name="submit" value="voeg toe" required> 
+        <input type="submit" name="submit" value="voeg toe" class='submit' required> 
         </form>
         </div>
         <div id="">
             <h2>Opleiding verwijderen</h2>
             <?php opleidingoverzicht(); ?>       
             <form action="opleiding_aanmaken.php" method="POST" onsubmit="opleidingverwijdern();">
-            <input type="submit" name="opverwijderen" value="verwijder alles">
+            <input type="submit" name="opverwijderen" value="verwijder alles" class='submit'>
             </form>
         </div>
         

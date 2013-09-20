@@ -66,7 +66,7 @@
 				Telefoonnummer: <input id="phoneInput" name="telefoon" type="number"><br>
 				<br>
 				Opleiding: <input id="searchbox" type="text" placeholder="Search"><br>
-				<div id="opleidingDIV" style="height:100px; width: 300px; background-color: #aaa; overflow: auto;">
+				<div id="opleidingDIV" style="height:100px; width: 300px; overflow: auto; border:solid 2px #009de0; border-radius:5px;">
 					<?php
 						foreach($opleidingen as $op){
 							echo "<span><input type='radio' name='opleiding' id='".$op."' value='".$op."'><label for='".$op."'>".$op."</label><br></span>";
