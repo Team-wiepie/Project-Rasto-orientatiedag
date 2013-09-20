@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Genereertijd: 19 sep 2013 om 13:24
+-- Genereertijd: 20 sep 2013 om 11:14
 -- Serverversie: 5.5.32
 -- PHP-versie: 5.4.16
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `decanen` (
   `stad_dorp` varchar(25) DEFAULT NULL,
   `straatnaam` varchar(25) DEFAULT NULL,
   `straatnummer` int(5) DEFAULT NULL,
-  `straattoev` int(5) DEFAULT NULL,
+  `straattoev` varchar(5) DEFAULT NULL,
   `email` varchar(40) DEFAULT NULL,
   `telefoon` int(15) DEFAULT NULL,
   PRIMARY KEY (`decaan_id`)
