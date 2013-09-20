@@ -7,7 +7,7 @@
 
 				$getMail = "SELECT email FROM email WHERE email_id = 1";
 				$swag = mysql_query($getMail);
-				$email = mysql_result($swag,0);
+				$email = str_replace("\$voornaam", $voornaam, mysql_result($swag,0));
 				
 				if(isset($_POST["submit"])){
 					$voornaam = $_POST["voornaam"];
@@ -23,6 +23,8 @@
 					
 					echo "Leerling toegevooegd.<br>";
 					echo $_SESSION['account_id'];
+					$replaceVar = array(":voornaam", ":tussenvoegsel", ":achternaam", ":adres", ":phone", ":opleiding");
+					$replaceRes = array($voornaam, $tussenvoegsel, $achternaam, $adres, $phone, $opleiding);
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
 					mail($adre, $subject, $email);
@@ -73,7 +75,7 @@
 						}
 					?>
 				</div>
-				<input type="submit" name="submit" value="Verzenden" class='submit'>
+				<input type="submit" name="submit" value="Verzenden">
 			</form>
 			<?php
 				}
