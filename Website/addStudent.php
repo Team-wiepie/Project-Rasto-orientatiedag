@@ -18,16 +18,18 @@
 					$opleiding = $_POST["opleiding"];
 					
 					$insQuery = "INSERT INTO leerling (voornaam, tussenvoegsel, achternaam, email, telefoon, opleidingnaam, decaan_id)
-						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$email', '$telefoon', '$opleiding', '".$_SESSION['account_id']."')";
+						VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$adres', '$telefoon', '$opleiding', '".$_SESSION['account_id']."')";
 					mysql_query($insQuery) or die("NOOOOOOO! ". mysql_error());
 					
-					echo "Leerling toegevooegd.<br>";
-					echo $_SESSION['account_id'];
-					$replaceVar = array(":voornaam", ":tussenvoegsel", ":achternaam", ":adres", ":phone", ":opleiding");
+					echo "Leerling toegevoegd.<br>";
+					
+					//$email = strip_tags($email);
+					$replaceVar = array(":voornaam", ":tussenvoegsel", ":achternaam", ":email", ":phone", ":opleiding");
 					$replaceRes = array($voornaam, $tussenvoegsel, $achternaam, $adres, $phone, $opleiding);
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					mail($adres, $subject, $email);
+					$email = str_replace($replaceVar, $replaceRes, $email);
+					mail($adres, $subject, $email, "Content-type: text/html; charset=iso-8859-1");
 					
 				}else{
 					$query = "SELECT opleidingnaam FROM opleiding";
@@ -53,7 +55,7 @@
 					
 					
 					$subject = "ROC leiden | Gegevens aangepast!";
-					$body = "Swag";
+					$body = "Email";
 					mail($email, $subject, $body);
 
 

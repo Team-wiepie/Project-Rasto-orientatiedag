@@ -1,4 +1,7 @@
-<?php include('server_login.php'); ?>
+<?php include('server_login.php'); 
+if (!isset($_SESSION['account_id']) || empty($_SESSION['account_id']) && $_SERVER['REQUEST_URI'] != '/login.php') {
+    header("location: login.php"); }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,9 +32,3 @@
 		</ul>
 	</div>
 	<div id='container'>
-
-<!-- 	<?php 
-	// if (!isset($_SESSION['user']) || empty($_SESSION['user']) && $_SERVER['REQUEST_URI'] != '/login.php') {
- //    header("location: login.php");
-
-?> -->

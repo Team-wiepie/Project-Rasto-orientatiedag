@@ -11,7 +11,6 @@
                     $query = "SELECT * FROM leerling";
                 }
                     $result = mysql_query($query);
-
                         echo "<table border='1'>";
                         echo "<tr>";
                         echo "<th>Voornaam</th>";
@@ -39,8 +38,12 @@
                         echo "<input type='hidden' name='opleidingnaam' value='".$row['opleidingnaam']."'/>";
                         echo "<td>"."<input type='submit' name='submit' value='aanpasssen' class='submit'>"."</td>";
                         echo "</form>";
+        
+                        echo "<form action='overzicht.php' method='POST'>";
+                        echo "<td><input type='submit' name='singledelete' value='verwijderen' class='submit'></td>";
+                        echo "<input type='hidden' name='leerling_id' value='".$row['leerling_id']."'/>";
+                        echo "</form>";
                         echo "</tr>";
-                        echo "<br />";
                     }
                 echo "</table>";
                 
@@ -81,8 +84,40 @@
                 <input type="submit" name="submit1" value="Verzenden">
             </form>
                     
-           <?php     }
+           <?php } ?>
 
-            ?>
+            <?php
+                if(isset($_POST['singledelete'])){
+    
+                $leerling = $_POST['leerling_id'];
+                $query4 = ("DELETE from leerling where leerling_id = '".$leerling."' limit 1");
+                mysql_query($query4) or die("Kan opleiding niet verwijderen <br />".mysql_error());
+                
+    
+                }else if (isset($_POST['opverwijderen'])){
+                    
+                    $query3 =("TRUNCATE TABLE leerling");
+                    mysql_query($query3) or die("failed to empty the table opleiding <br />".mysql_error());
+                    
+                     
+                }
+
+                ?>
+                <script>
+                    function leerlingverwijderen() {
+                        if(confirm('Weet u zeker dat je alle leerlingen wilt verwijderen?')){
+                           return true;
+                        }else{
+                           return false;
+                        }
+                    }
+                </script>
+
+            
+            <form action="overzicht.php" method="POST" onsubmit="opleidingverwijdern();">
+            <input type="submit" name="opverwijderen" value="verwijder alles" class='submit'>
+            </form>
+            
+
             </div>
-<?php require 'footer.php' ?>
+<?php require 'footer.php'?>
