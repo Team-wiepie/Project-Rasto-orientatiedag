@@ -1,4 +1,4 @@
-<?php
+<?php require_once('server_login.php');
 if (isset($_POST['submit'])){
 	
 

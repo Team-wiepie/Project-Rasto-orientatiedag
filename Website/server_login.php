@@ -1,4 +1,6 @@
-<?php	
+<?php
+session_start();
+	
     $host = "localhost";
     $user = "rsbloom";
     $pass = "uK34rRGy";

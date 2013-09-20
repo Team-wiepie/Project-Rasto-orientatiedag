@@ -8,15 +8,7 @@
 		mysql_query("UPDATE email SET email = '". $_POST['emailText'] . "' WHERE email_id = 1") or die("Kut! " . mysql_error());
 	}
 ?>
-<html>
-	<head>
-		<!-- CDN hosted by Cachefly -->
-		<script src="http://tinymce.cachefly.net/4.0/tinymce.min.js"></script>
-		<script>
-				tinymce.init({selector:'textarea', width:600, height:300});
-		</script>
-	</head>
-	<body>
+<?php include('header.php'); ?>
 		<div id="resultaat">
 			<?php if(isset($_POST['submit'])){echo "<b>Het E-Mail bericht is bijgewerkt!</b><br>";} ?>
 			Voorbeeld van de E-Mail:<br>

@@ -13,7 +13,7 @@
 					$voornaam = $_POST["voornaam"];
 					$tussenvoegsel = $_POST["tussenvoegsel"];
 					$achternaam = $_POST["achternaam"];
-					$email = $_POST["email"];
+					$adres = $_POST["email"];
 					$phone = $_POST["telefoon"];
 					$opleiding = $_POST["opleiding"];
 					
@@ -25,7 +25,7 @@
 					echo $_SESSION['account_id'];
 					
 					$subject = "Je bent toegevoegd aan de opleiding $opleiding!";
-					mail($email, $subject, $email);
+					mail($adre, $subject, $email);
 					
 				}else{
 					$query = "SELECT opleidingnaam FROM opleiding";

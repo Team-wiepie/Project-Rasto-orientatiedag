@@ -1,12 +1,5 @@
-<?php
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="orientatiedag"; // Database name 
-$tbl_name=""; // Table name 
-
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+<?php include('server_login.php');
+mysql_select_db("$db")or die("cannot select DB");
 
 {
   $chars =  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
@@ -21,9 +14,15 @@ mysql_select_db("$db_name")or die("cannot select DB");
   $passwordrandom="ROC".$str;
 
 }
-
+echo $passwordrandom;
+echo "<br /><br />";
+ $variable =$_POST['user'];
+ echo $variable;
 
  $to = $_POST['user'];
+echo "<br /><br />";
+echo $to;
+
  $subject = "Your Password";
  $body = "Your password is"." ".$passwordrandom;
  $from = "00099743@student.rocleiden.nl";
@@ -35,6 +34,5 @@ mysql_select_db("$db_name")or die("cannot select DB");
   }
 $passwordencrypt = md5(sha1($passwordrandom));
 
-
- mysql_query("UPDATE account SET wachtwoord='$passwordencrypt' WHERE email='$to';")or die("Can't Insert");
+mysql_query("UPDATE account SET wachtwoord='$passwordencrypt' WHERE email='$to';")or die("Can't Insert");
  ?>

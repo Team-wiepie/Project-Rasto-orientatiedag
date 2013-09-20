@@ -1,4 +1,4 @@
-<?php
+<?php require_once('server_login.php');
 if(isset($_POST['submit'])){
     $chars =  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
               'abcdefghijklmnopqrstuvwxyz'.
@@ -24,9 +24,7 @@ if(isset($_POST['submit'])){
      echo "<h1>Check your e-mail for your password</h1>
          <h1>You Succesfully Registered</h1>
          <td><a href='login.php'>Click here to go back</a></td>";
-     echo $passwordrandom;
      
-   require_once 'server_login.php';
 
    $passwordencrypt = md5(sha1($passwordrandom));
    $usernamem=$_POST['Eusername'];
