@@ -15,6 +15,7 @@ $xml          = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 $root_element = $config['table_name']."s"; //fruits
 $xml         .= "<$root_element>";
 
+
 //select all items in table
 $sql = "SELECT * FROM ".$config['table_name'];
  
